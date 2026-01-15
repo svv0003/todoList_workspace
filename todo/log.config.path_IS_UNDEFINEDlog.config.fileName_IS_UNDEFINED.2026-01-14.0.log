@@ -1,0 +1,223 @@
+2026-01-14 11:00:39.086  INFO 10324 --- [restartedMain] com.my.todo.TodoApplication              : Starting TodoApplication using Java 21.0.8 with PID 10324 (C:\Users\TJ\Desktop\sw\todoList-workspace\todo\build\classes\java\main started by TJ in C:\Users\TJ\Desktop\sw\todoList-workspace\todo)
+2026-01-14 11:00:39.088  INFO 10324 --- [restartedMain] com.my.todo.TodoApplication              : No active profile set, falling back to 1 default profile: "default"
+2026-01-14 11:00:39.154  INFO 10324 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-14 11:00:39.155  INFO 10324 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-14 11:00:41.452  INFO 10324 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-14 11:00:41.474  INFO 10324 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2026-01-14 11:00:42.587  INFO 10324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-01-14 11:00:42.605  INFO 10324 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-14 11:00:42.605  INFO 10324 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-14 11:00:42.675  INFO 10324 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-14 11:00:42.675  INFO 10324 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3518 ms
+2026-01-14 11:00:43.138  INFO 10324 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-14 11:00:43.230  INFO 10324 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-01-14 11:00:43.290  INFO 10324 --- [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-14 11:00:43.730  INFO 10324 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-14 11:00:43.779  INFO 10324 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-14 11:00:44.023  INFO 10324 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@33f9e569
+2026-01-14 11:00:44.025  INFO 10324 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-14 11:00:44.166  INFO 10324 --- [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 18.1
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-14 11:00:44.687  INFO 10324 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-14 11:00:44.695  INFO 10324 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-14 11:00:45.274  WARN 10324 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-14 11:00:45.776  WARN 10324 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2026-01-14 11:00:46.587  INFO 10324 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-01-14 11:00:46.600  INFO 10324 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-01-14 11:00:46.704  INFO 10324 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-01-14 11:00:46.719  INFO 10324 --- [restartedMain] com.my.todo.TodoApplication              : Started TodoApplication in 8.6 seconds (process running for 9.674)
+2026-01-14 11:00:47.005  INFO 10324 --- [RMI TCP Connection(3)-192.168.0.210] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-14 11:00:47.005  INFO 10324 --- [RMI TCP Connection(3)-192.168.0.210] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-14 11:00:47.008  INFO 10324 --- [RMI TCP Connection(3)-192.168.0.210] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-01-14 11:03:04.828  INFO 10324 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-14 11:03:04.835  INFO 10324 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 11:03:04.836  INFO 10324 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 11:03:04.894  INFO 10324 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : Running Time : 57ms
+2026-01-14 11:03:04.894  INFO 10324 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 11:04:05.384  INFO 10324 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : [TodoController.deleteTodo()] 요청 / ip : 127.0.0.1
+2026-01-14 11:04:05.385  INFO 10324 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.removeTodo() 서비스 호출 ==========
+2026-01-14 11:04:05.385  INFO 10324 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : Parameter : [4]
+2026-01-14 11:04:05.394  INFO 10324 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : Running Time : 9ms
+2026-01-14 11:04:05.394  INFO 10324 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 11:04:05.424  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-14 11:04:05.425  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 11:04:05.425  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 11:04:05.427  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : Running Time : 2ms
+2026-01-14 11:04:05.427  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 11:04:06.596  INFO 10324 --- [http-nio-8080-exec-5] com.my.todo.common.aop.LoggingAspect     : [TodoController.deleteTodo()] 요청 / ip : 127.0.0.1
+2026-01-14 11:04:06.597  INFO 10324 --- [http-nio-8080-exec-5] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.removeTodo() 서비스 호출 ==========
+2026-01-14 11:04:06.597  INFO 10324 --- [http-nio-8080-exec-5] com.my.todo.common.aop.LoggingAspect     : Parameter : [2]
+2026-01-14 11:04:06.598  INFO 10324 --- [http-nio-8080-exec-5] com.my.todo.common.aop.LoggingAspect     : Running Time : 0ms
+2026-01-14 11:04:06.598  INFO 10324 --- [http-nio-8080-exec-5] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 11:04:06.603  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-14 11:04:06.603  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 11:04:06.604  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 11:04:06.605  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-14 11:04:06.605  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 11:04:07.760  INFO 10324 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : [TodoController.deleteTodo()] 요청 / ip : 127.0.0.1
+2026-01-14 11:04:07.761  INFO 10324 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.removeTodo() 서비스 호출 ==========
+2026-01-14 11:04:07.761  INFO 10324 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : Parameter : [1]
+2026-01-14 11:04:07.762  INFO 10324 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-14 11:04:07.762  INFO 10324 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 11:04:07.766  INFO 10324 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-14 11:04:07.767  INFO 10324 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 11:04:07.767  INFO 10324 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 11:04:07.768  INFO 10324 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-14 11:04:07.768  INFO 10324 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 11:04:17.295  INFO 10324 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : [TodoController.createTodo()] 요청 / ip : 127.0.0.1
+2026-01-14 11:04:17.296  INFO 10324 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.addTodo() 서비스 호출 ==========
+2026-01-14 11:04:17.297  INFO 10324 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : Parameter : [TodoDto(id=null, content=이력서 작성, isCompleted=false, createdAt=null)]
+2026-01-14 11:04:17.307  INFO 10324 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : Running Time : 10ms
+2026-01-14 11:04:17.307  INFO 10324 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 11:04:17.311  INFO 10324 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-14 11:04:17.312  INFO 10324 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 11:04:17.312  INFO 10324 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 11:04:17.313  INFO 10324 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-14 11:04:17.313  INFO 10324 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 11:04:58.502  INFO 10324 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : [TodoController.createTodo()] 요청 / ip : 127.0.0.1
+2026-01-14 11:04:58.503  INFO 10324 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.addTodo() 서비스 호출 ==========
+2026-01-14 11:04:58.503  INFO 10324 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : Parameter : [TodoDto(id=null, content=헬스장, isCompleted=false, createdAt=null)]
+2026-01-14 11:04:58.504  INFO 10324 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-14 11:04:58.504  INFO 10324 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 11:04:58.530  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-14 11:04:58.530  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 11:04:58.530  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 11:04:58.533  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : Running Time : 3ms
+2026-01-14 11:04:58.533  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 11:05:13.789  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : [TodoController.createTodo()] 요청 / ip : 127.0.0.1
+2026-01-14 11:05:13.789  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.addTodo() 서비스 호출 ==========
+2026-01-14 11:05:13.789  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : Parameter : [TodoDto(id=null, content=밥 뭐 먹징, isCompleted=false, createdAt=null)]
+2026-01-14 11:05:13.790  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-14 11:05:13.790  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 11:05:13.825  INFO 10324 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-14 11:05:13.825  INFO 10324 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 11:05:13.825  INFO 10324 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 11:05:13.827  INFO 10324 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : Running Time : 2ms
+2026-01-14 11:05:13.827  INFO 10324 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 11:06:38.363  INFO 10324 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : [TodoController.updateTodo()] 요청 / ip : 127.0.0.1
+2026-01-14 11:06:38.363  INFO 10324 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.toggleTodo() 서비스 호출 ==========
+2026-01-14 11:06:38.364  INFO 10324 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : Parameter : [TodoDto(id=6, content=null, isCompleted=true, createdAt=null)]
+2026-01-14 11:06:38.366  INFO 10324 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : Running Time : 2ms
+2026-01-14 11:06:38.366  INFO 10324 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 11:06:38.371  INFO 10324 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-14 11:06:38.371  INFO 10324 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 11:06:38.371  INFO 10324 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 11:06:38.372  INFO 10324 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-14 11:06:38.372  INFO 10324 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 11:06:39.327  INFO 10324 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : [TodoController.updateTodo()] 요청 / ip : 127.0.0.1
+2026-01-14 11:06:39.327  INFO 10324 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.toggleTodo() 서비스 호출 ==========
+2026-01-14 11:06:39.327  INFO 10324 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : Parameter : [TodoDto(id=6, content=null, isCompleted=false, createdAt=null)]
+2026-01-14 11:06:39.328  INFO 10324 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-14 11:06:39.328  INFO 10324 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 11:06:39.364  INFO 10324 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-14 11:06:39.365  INFO 10324 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 11:06:39.365  INFO 10324 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 11:06:39.366  INFO 10324 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-14 11:06:39.367  INFO 10324 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 11:06:40.109  INFO 10324 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : [TodoController.updateTodo()] 요청 / ip : 127.0.0.1
+2026-01-14 11:06:40.110  INFO 10324 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.toggleTodo() 서비스 호출 ==========
+2026-01-14 11:06:40.110  INFO 10324 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : Parameter : [TodoDto(id=6, content=null, isCompleted=true, createdAt=null)]
+2026-01-14 11:06:40.111  INFO 10324 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-14 11:06:40.111  INFO 10324 --- [http-nio-8080-exec-3] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 11:06:40.121  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-14 11:06:40.122  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 11:06:40.122  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 11:06:40.123  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-14 11:06:40.123  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 11:38:07.378  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-14 11:38:07.384  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 11:38:07.385  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 11:38:07.393  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : Running Time : 8ms
+2026-01-14 11:38:07.393  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 12:35:07.806  INFO 10324 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-14 12:35:07.812  INFO 10324 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 12:35:07.812  INFO 10324 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 12:35:07.821  INFO 10324 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : Running Time : 8ms
+2026-01-14 12:35:07.822  INFO 10324 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 12:35:17.168  INFO 10324 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-14 12:35:17.169  INFO 10324 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 12:35:17.169  INFO 10324 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 12:35:17.170  INFO 10324 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-14 12:35:17.171  INFO 10324 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 12:41:59.325  INFO 10324 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-14 12:41:59.326  INFO 10324 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 12:41:59.326  INFO 10324 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 12:41:59.330  INFO 10324 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : Running Time : 4ms
+2026-01-14 12:41:59.330  INFO 10324 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 12:42:18.297  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-14 12:42:18.298  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 12:42:18.299  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 12:42:18.300  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-14 12:42:18.300  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 12:51:56.528  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-14 12:51:56.529  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 12:51:56.529  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 12:51:56.533  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : Running Time : 4ms
+2026-01-14 12:51:56.533  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 12:54:52.205  INFO 10324 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 127.0.0.1
+2026-01-14 12:54:52.205  INFO 10324 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 12:54:52.205  INFO 10324 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 12:54:52.206  INFO 10324 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-14 12:54:52.206  INFO 10324 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 12:57:10.624  INFO 10324 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 0:0:0:0:0:0:0:1
+2026-01-14 12:57:10.625  INFO 10324 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 12:57:10.625  INFO 10324 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 12:57:10.626  INFO 10324 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-14 12:57:10.626  INFO 10324 --- [http-nio-8080-exec-1] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 12:57:16.569  INFO 10324 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 0:0:0:0:0:0:0:1
+2026-01-14 12:57:16.569  INFO 10324 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 12:57:16.570  INFO 10324 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 12:57:16.571  INFO 10324 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-14 12:57:16.571  INFO 10324 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 13:06:19.744  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 0:0:0:0:0:0:0:1
+2026-01-14 13:06:19.744  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 13:06:19.744  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 13:06:19.748  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : Running Time : 4ms
+2026-01-14 13:06:19.748  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 13:08:12.987  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 0:0:0:0:0:0:0:1
+2026-01-14 13:08:12.988  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 13:08:12.988  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 13:08:12.992  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : Running Time : 4ms
+2026-01-14 13:08:12.992  INFO 10324 --- [http-nio-8080-exec-7] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 13:08:26.910  INFO 10324 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 0:0:0:0:0:0:0:1
+2026-01-14 13:08:26.910  INFO 10324 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 13:08:26.910  INFO 10324 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 13:08:26.912  INFO 10324 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : Running Time : 2ms
+2026-01-14 13:08:26.912  INFO 10324 --- [http-nio-8080-exec-6] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 13:08:34.849  INFO 10324 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 0:0:0:0:0:0:0:1
+2026-01-14 13:08:34.850  INFO 10324 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 13:08:34.850  INFO 10324 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 13:08:34.852  INFO 10324 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : Running Time : 2ms
+2026-01-14 13:08:34.852  INFO 10324 --- [http-nio-8080-exec-8] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 13:09:30.791  INFO 10324 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 0:0:0:0:0:0:0:1
+2026-01-14 13:09:30.791  INFO 10324 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 13:09:30.795  INFO 10324 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 13:09:30.796  INFO 10324 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : Running Time : 1ms
+2026-01-14 13:09:30.797  INFO 10324 --- [http-nio-8080-exec-9] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 13:09:46.267  INFO 10324 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 0:0:0:0:0:0:0:1
+2026-01-14 13:09:46.267  INFO 10324 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 13:09:46.267  INFO 10324 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 13:09:46.270  INFO 10324 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : Running Time : 3ms
+2026-01-14 13:09:46.270  INFO 10324 --- [http-nio-8080-exec-10] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 13:17:59.118  INFO 10324 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 0:0:0:0:0:0:0:1
+2026-01-14 13:17:59.119  INFO 10324 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 13:17:59.119  INFO 10324 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 13:17:59.123  INFO 10324 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : Running Time : 4ms
+2026-01-14 13:17:59.123  INFO 10324 --- [http-nio-8080-exec-2] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 13:20:46.065  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : [TodoController.getAllTodos()] 요청 / ip : 0:0:0:0:0:0:0:1
+2026-01-14 13:20:46.066  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : ========== TodoServiceImpl.getTodos() 서비스 호출 ==========
+2026-01-14 13:20:46.066  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : Parameter : []
+2026-01-14 13:20:46.069  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : Running Time : 3ms
+2026-01-14 13:20:46.069  INFO 10324 --- [http-nio-8080-exec-4] com.my.todo.common.aop.LoggingAspect     : ===================================================================================
+2026-01-14 14:18:51.410  WARN 10324 --- [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=27m4s455ms927µs).
+2026-01-14 14:33:45.004  INFO 10324 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-14 14:33:45.018  INFO 10324 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-01-14 14:33:45.056  INFO 10324 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-14 14:33:45.097  INFO 10324 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-14 14:33:45.110  INFO 10324 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

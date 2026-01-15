@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+    encoding: UTF-8
+    cache: false
+
+  devtools:
+    restart:
+      additional-paths: src/main/resources/mappers
+
+  web:
+    resources:
+      static-locations: classpath:/static/
+
+  # application.yml 또는 application.properties는 Java에서 자동으로 파일 읽기 기능이 내장되어 있지만
+  # 이외 .properties 또는 .yml의 경우에는 자동 읽기 설정이 되어있지 않기 때문에 추가적으로 읽을 파일 경로를 설정한다.
+  config:
+    import: classpath:config.yml
+
+mybatis:
+  mapper-locations: classpath:/mappers/**/*.xml

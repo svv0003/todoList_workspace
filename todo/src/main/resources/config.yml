@@ -1,0 +1,41 @@
+# Database Configuration
+# jdbc:postgresql://aws-1-ap-northeast-2.pooler.supabase.com:6543/postgres?user=postgres.namtcbdqtwpaieoxgayz&password=[YOUR-PASSWORD]
+# jdbc:postgresql://aws-1-ap-northeast-2.pooler.supabase.com:6543/postgres?sslmode=require&prepareThreshold=0
+# user=postgres.namtcbdqtwpaieoxgayz&password=[YOUR-PASSWORD]
+
+spring:
+  datasource:
+#    url: jdbc:postgresql://localhost:5432/mbtiDB
+#    username: tuser
+#    password: tjee1234
+#    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://aws-1-ap-northeast-2.pooler.supabase.com:6543/postgres?sslmode=require&prepareThreshold=0
+    username: postgres.namtcbdqtwpaieoxgayz
+    password: thejoeuntjee1234
+    driver-class-name: org.postgresql.Driver
+
+  sql:
+    init:
+      mode: always
+
+    hikari:
+      connection-timeout: 30000
+      maximum-pool-size: 5
+      idle-timeout: 600000
+      pool-name: MyHikariCP
+      auto-commit: false
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+
+# DBConfig -> properties로 가능하고, 추가 커스텀 클래스가 필요하기 때문에 사용하지 않을 것이다.
+mybatis:
+  mapper-locations: classpath:/mapper/**/*.xml
+  type-aliases-package: com.my.todo.
+  config-location: classpath:/mybatis-config.xml
+
+log:
+  config: ./logs/
+  fileName: application
