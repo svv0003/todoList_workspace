@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../common/theme_provider.dart';
+import '../../providers/theme_provider.dart';
 
 class ThemePurchaseDialog extends StatelessWidget {
   final ThemeProvider themeProvider;

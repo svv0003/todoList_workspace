@@ -16,25 +16,26 @@ class StatisticsBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         padding: const EdgeInsets.all(16),
-        color: Colors.white,
+        // color: Color(0xFFB2EBF2),
         child: Row(
+          spacing: 20,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
 
           children: [
             StatCard(
               label: 'Total',
               count: totalCount.toString(),
-              color: Colors.blue,
+              color: Color(0xFFB2EEF3),
             ),
             StatCard(
               label: 'Active',
               count: activeCount.toString(),
-              color: Colors.orange,
+              color: Color(0xFFD3F2B2),
             ),
             StatCard(
               label: 'Done',
               count: completedCount.toString(),
-              color: Colors.green,
+              color: Color(0xFFF2C8B2),
             ),
           ],
         )
@@ -71,7 +72,8 @@ class StatCard extends StatelessWidget {
             label,
             style: TextStyle(
               fontSize: 14,
-              color: Colors.grey[700],
+              color: Colors.white,
+              fontWeight: FontWeight.w900,
             ),
           ),
         ],

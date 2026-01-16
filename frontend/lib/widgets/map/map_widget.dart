@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
@@ -61,7 +60,6 @@ class _MapWidgetState extends State<MapWidget> {
     ''';
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -73,6 +71,4 @@ class _MapWidgetState extends State<MapWidget> {
       child: WebViewWidget(controller: controller),
     );
   }
-
-
 }

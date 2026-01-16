@@ -2,7 +2,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../common/theme_provider.dart';
+import '../../providers/theme_provider.dart';
 
 class ThemeCard extends StatelessWidget {
   final ThemeProvider themeProvider;

@@ -14,9 +14,9 @@ lib
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend/widgets/map/html_map_widget.dart';
+import 'package:go_router/go_router.dart';
 
 import '../widgets/map/location_info_widget.dart';
-import '../widgets/map/map_widget.dart';
 import '../widgets/map/transport_info_widget.dart';
 
 class MapScreen extends StatelessWidget {
@@ -26,6 +26,10 @@ class MapScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        leading: IconButton(
+            onPressed: () => context.go("/"),
+            icon: Icon(Icons.arrow_back)
+        ),
         title: const Text("오시는 길"),
         centerTitle: true,
         backgroundColor: Colors.white,

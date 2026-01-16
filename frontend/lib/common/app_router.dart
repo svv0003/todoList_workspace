@@ -1,5 +1,7 @@
+import 'package:frontend/screens/game_screen.dart';
 import 'package:frontend/screens/login_screen.dart';
 import 'package:frontend/screens/map_screen.dart';
+import 'package:frontend/screens/scaffold_screen.dart';
 import 'package:frontend/screens/theme_setting_screen.dart';
 import 'package:frontend/screens/todo_list_screen.dart';
 import 'package:go_router/go_router.dart';
@@ -23,6 +25,14 @@ class AppRouter {
       GoRoute(
           path: '/map',
           builder: (context, state) => MapScreen()
+      ),
+      GoRoute(
+          path: '/scaf',
+          builder: (context, state) => const ScaffoldScreen()
+      ),
+      GoRoute(
+          path: '/game',
+          builder: (context, state) => const GameScreen()
       ),
     ],
   );

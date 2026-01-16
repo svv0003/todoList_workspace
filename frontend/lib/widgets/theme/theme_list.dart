@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:frontend/widgets/theme/theme_card.dart';
 import 'package:frontend/widgets/theme/theme_purchase_dialog.dart';
 
-import '../../common/theme_provider.dart';
+import '../../providers/theme_provider.dart';
 
 class ThemeList extends StatelessWidget {
   final ThemeProvider themeProvider;

@@ -18,7 +18,7 @@ class LocationInfoWidget extends StatelessWidget {
           Text(
             "청담동ABC",
             style: TextStyle(
-              fontSize: 16,     // 16 : 기본 사이즈라서 기입 필요 없다.
+              fontSize: 16,           // 16 : 기본 사이즈라서 기입할 필요는 없다.
               color: Colors.black54
             ),
           ),

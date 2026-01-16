@@ -44,9 +44,7 @@ class TransportInfoItem extends StatelessWidget {
             )
           ],
         )),
-
       ],
     );
   }
-
 }

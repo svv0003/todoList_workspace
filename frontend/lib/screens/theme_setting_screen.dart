@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
-import '../common/theme_provider.dart';
+import '../providers/theme_provider.dart';
 import '../widgets/theme/theme_list.dart';
 
 /*
@@ -20,15 +20,36 @@ class ThemeSettingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);    // 그라데이션
+
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(onPressed: () => context.go("/"), icon: Icon(Icons.arrow_back)),
         title: const Text("테마 설정"),
       ),
-      body: Consumer<ThemeProvider>(
-        builder: (context, themeProvider, child) {
-          return ThemeList(themeProvider: themeProvider);
-        }
+//       body: Consumer<ThemeProvider>(
+//         builder: (context, themeProvider, child) {
+//           return ThemeList(themeProvider: themeProvider);
+//         }
+//       ),
+//     );
+//   }
+// }
+
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              themeProvider.gradientStart,
+              themeProvider.gradientEnd,
+            ],
+          ),
+        ),
+        child: SafeArea(
+          child: ThemeList(themeProvider: themeProvider),
+        ),
       ),
     );
   }
