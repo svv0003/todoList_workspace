@@ -3,6 +3,7 @@ import 'package:frontend/screens/game_screen.dart';
 import 'package:frontend/screens/game_screen_second.dart';
 import 'package:frontend/screens/login_screen.dart';
 import 'package:frontend/screens/map_screen.dart';
+import 'package:frontend/screens/music_player_screen.dart';
 import 'package:frontend/screens/scaffold_screen.dart';
 import 'package:frontend/screens/theme_setting_screen.dart';
 import 'package:frontend/screens/todo_list_screen.dart';
@@ -31,6 +32,10 @@ class AppRouter {
       GoRoute(
           path: '/scaf',
           builder: (context, state) => const ScaffoldScreen()
+      ),
+      GoRoute(
+          path: '/music',
+          builder: (context, state) => const MusicPlayerScreen()
       ),
       GoRoute(
           path: '/game',

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/providers/game_provider.dart';
 import 'package:frontend/providers/game_provider_second.dart';
+import 'package:frontend/providers/music_provider.dart';
 import 'package:frontend/screens/font_screen.dart';
 import 'package:frontend/screens/game_screen.dart';
 import 'package:frontend/screens/scaffold_screen.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => TodoProvider()),
         ChangeNotifierProvider(create: (_) => ThemeProvider()),
+        ChangeNotifierProvider(create: (_) => MusicProvider()),
         ChangeNotifierProvider(create: (_) => GameProvider()),
         ChangeNotifierProvider(create: (_) => GameProviderSecond()),
       ],

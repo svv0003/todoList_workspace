@@ -35,7 +35,7 @@ flutter:
     - .env.local
 
   # assets 추가 시 pub get으로 반드시 추가된 세팅 반영하도록 한다.
-  fonts:
-    - family: Pretendard
-      fonts:
-        - asset: assets/fonts/PretendardVariable.ttf
+#  fonts:
+#    - family: Pretendard
+#      fonts:
+#        - asset: assets/fonts/PretendardVariable.ttf
