@@ -15,10 +15,6 @@ class MusicPlayerScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
     //   appBar: AppBar(
-    //     leading: IconButton(onPressed: () =>
-    //         context.go("/"),
-    //         icon: Icon(Icons.arrow_back)
-    //     ),
     //     title: const Text('게임 화면'),
     //     backgroundColor: Colors.purple,
     //   ),

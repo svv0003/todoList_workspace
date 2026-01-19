@@ -1,0 +1,138 @@
+import 'dart:async';
+
+import 'package:flutter/cupertino.dart';
+
+/*
+게임 모든 상태와 로직을 관리하는 Provider 클래스
+ChangeNotifier 상속받아서 상태 변경 시 UI 알림한다.
+ */
+class GameProviderSecond with ChangeNotifier {
+
+  //======================================== 게임 관련 상태 변수
+  // 새의 Y축 위치(-1 : 화면 최상단, 0: 중앙, 1: 화면 최하단)
+  double birdY = 0;
+
+  // 중력 계산을 위한 시간 변수 (초 단위)
+  double time = 0;
+
+  // 새의 현재 높이 (물리 계산용)
+  double height = 0;
+
+  // 점프 시작 시점의 새 높이 (초기값 저장)
+  double initialHeight = 0;
+
+  // 게임 시작 여부 (true:게임 진행 중, false:대기 중)
+  bool gameStarted = false;
+
+  // 현재 점수 (장애물을 통과할 때마다 1식 증가)
+  int score = 0;
+
+  // 장애물 X축 위치 (2: 화면 오른쪽 끝, -2: 화면 왼쪽 끝)
+  double barrierX = 2;
+
+  // 장애물 높이 (픽셀 단위)
+  double barrierHeight = 200;
+
+  // 게임 루프 실행하는 타이머 객체
+  Timer? _timer;
+
+
+
+
+
+  //======================================== 게임 관련 메서드
+  // 게임 시작하는 메서드.
+  // 50ms마다 게임 상태를 업데이트하는 타이머 시작
+  /*
+  - 시간 증가 (0.04씩)
+  - 중력 공식으로 새의 높이 계산: `h = h0 - 4.9 × t²`
+  - 새의 Y 위치 업데이트
+  - 장애물 이동 (왼쪽으로 0.05씩)
+  - 장애물이 화면을 벗어나면 오른쪽 끝으로 리셋하고 점수 증가
+  - 게임 오버 체크
+   */
+  void startGame() {
+    gameStarted = true;
+    _timer = Timer.periodic(Duration(milliseconds: 50), (timer) {
+      // TODO: 시간 증가
+      time += 0.04;
+
+      // TODO: 물리 공식으로 높이 계산
+      height = initialHeight - 4.9 * time * time;
+
+      // TODO: 새의 Y 위치 업데이트
+      birdY = initialHeight - height;
+
+      // TODO: 장애물 이동 및 리셋 로직
+      if(barrierX < -2) {
+        barrierX = 2.5;
+        score++;
+      } else {
+        barrierX -= 0.05;
+      }
+
+      // TODO: notifyListeners() 호출
+      notifyListeners();
+
+      // TODO: 게임 오버 체크
+      if(_checkGameOver()) {
+        stopGame();
+      }
+    });
+  }
+
+  // 새 점프시키는 메서드
+  // 화면 탭할 때마다 호출
+  /*
+  - 탭할 때마다 새로운 포물선 운동 시작
+  - 시간을 0으로 초기화
+  - 현재 위치를 새로운 시작점으로 저장
+   */
+  void jump() {
+    time = 0;
+    initialHeight = birdY;
+    notifyListeners();
+  }
+
+  // 게임 오버 조건을 체크하는 메서드
+  // @retuen true  => 게임 오버
+  // @retuen false => 계속 진행
+  /*
+  - 새가 화면 위/아래를 벗어났는지 체크
+  - 새가 장애물과 충돌했는지 체크
+
+  **충돌 조건:**
+  1. `birdY > 1.0` 또는 `birdY < -1.0` → 화면 경계 벗어남
+  2. 새가 장애물 X 범위 안에 있고 (`barrierX < 0.2 && barrierX > -0.2`)
+  3. 새가 장애물 사이 간격을 벗어남 (`birdY < -0.3 || birdY > 0.3`)
+   */
+  bool _checkGameOver() {
+    if(birdY > 1.0 || birdY < -1.0) return true;
+    if(barrierX < 0.2 && barrierX > -0.2) {
+      if(birdY < -0.3 || birdY > 0.3) return true;
+    }
+    return false;
+  }
+
+  // 게임 중지하는 메서드
+  // 타이머 멈추고, 게임 시작 상태를 false로 변경
+  void stopGame() {
+    _timer?.cancel();
+    gameStarted = false;
+    resetGame();
+    notifyListeners();
+  }
+
+  // 게임 리셋하는 메서드
+  // 게임 종료 후 다시 시작할 때 호출
+  void resetGame() {
+    birdY = 0;
+    time = 0;
+    height = 0;
+    initialHeight = 0;
+    gameStarted = false;
+    score = 0;
+    barrierX = 2;
+    notifyListeners();
+  }
+}

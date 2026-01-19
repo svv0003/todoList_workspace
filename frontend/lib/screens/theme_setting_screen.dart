@@ -24,7 +24,7 @@ class ThemeSettingScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(onPressed: () => context.go("/"), icon: Icon(Icons.arrow_back)),
+        // leading: IconButton(onPressed: () => context.go("/"), icon: Icon(Icons.arrow_back)),
         title: const Text("테마 설정"),
       ),
 //       body: Consumer<ThemeProvider>(

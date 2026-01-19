@@ -1,0 +1,37 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:frontend/providers/game_provider_second.dart';
+import 'package:provider/provider.dart';
+
+class BarrierWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final game = context.watch<GameProviderSecond>();
+
+    return Stack(
+      children: [
+        // TODO: 위쪽 장애물
+        AnimatedContainer(
+          duration: Duration(milliseconds: 0),
+          alignment: Alignment(game.barrierX, 1.1),
+          child: Container(
+            width: 80,
+            height: game.barrierHeight,
+            color: Colors.green[700],
+          ),
+        ),
+
+        // // TODO: 아래쪽 장애물
+        // AnimatedContainer(
+        //   duration: Duration(milliseconds: 0),
+        //   alignment: Alignment(game.barrierX, -1.1),
+        //   child: Container(
+        //     width: 80,
+        //     height: game.barrierHeight,
+        //     color: Colors.green[700],
+        //   ),
+        // ),
+      ],
+    );
+  }
+}

@@ -1,4 +1,6 @@
+import 'package:frontend/screens/font_screen.dart';
 import 'package:frontend/screens/game_screen.dart';
+import 'package:frontend/screens/game_screen_second.dart';
 import 'package:frontend/screens/login_screen.dart';
 import 'package:frontend/screens/map_screen.dart';
 import 'package:frontend/screens/scaffold_screen.dart';
@@ -33,6 +35,14 @@ class AppRouter {
       GoRoute(
           path: '/game',
           builder: (context, state) => const GameScreen()
+      ),
+      GoRoute(
+          path: '/fonts',
+          builder: (context, state) => const FontScreen()
+      ),
+      GoRoute(
+          path: '/game2',
+          builder: (context, state) => const GameScreenSecond()
       ),
     ],
   );

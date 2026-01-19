@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/providers/game_provider.dart';
+import 'package:frontend/providers/game_provider_second.dart';
+import 'package:frontend/screens/font_screen.dart';
+import 'package:frontend/screens/game_screen.dart';
 import 'package:frontend/screens/scaffold_screen.dart';
 import 'package:provider/provider.dart';
 import 'common/app_router.dart';
@@ -27,11 +30,13 @@ class MyApp extends StatelessWidget {
     //    child: const MaterialApp( ... )
     // ),
 
+
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => TodoProvider()),
         ChangeNotifierProvider(create: (_) => ThemeProvider()),
         ChangeNotifierProvider(create: (_) => GameProvider()),
+        ChangeNotifierProvider(create: (_) => GameProviderSecond()),
       ],
         child: Consumer<ThemeProvider>(
           builder: (context, themeProvider, child) {
@@ -41,8 +46,10 @@ class MyApp extends StatelessWidget {
             // theme: themeProvider.themeData,
             // // home: const TodoListScreen(),
             // // home: MapScreen(),
-            // home: ScaffoldScreen(),
+            // // home: ScaffoldScreen(),
+            // home: FontScreen(),
             // );
+
             return MaterialApp.router(
               debugShowCheckedModeBanner: false,
               title: AppConstants.appName,

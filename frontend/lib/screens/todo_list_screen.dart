@@ -75,6 +75,14 @@ class _TodoListScreenState extends State<TodoListScreen> {
             onPressed: () => context.go("/game"),
             icon: const Icon(Icons.gamepad),
           ),
+          IconButton(
+            onPressed: () => context.go("/fonts"),
+            icon: const Icon(Icons.font_download),
+          ),
+          IconButton(
+            onPressed: () => context.go("/game2"),
+            icon: const Icon(Icons.gamepad),
+          ),
         ],
       ),
 //       body: Consumer<TodoProvider>(
