@@ -4,6 +4,8 @@ import 'package:frontend/providers/game_provider_second.dart';
 import 'package:provider/provider.dart';
 
 class BirdWidget extends StatelessWidget {
+  const BirdWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     final birdY = context.watch<GameProviderSecond>().birdY;

@@ -49,38 +49,66 @@ class GameScreenSecond extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
+    /*
+    Listener      : 마우스 클릭, 터치 동시 제공한다.
+    onPointerDown : 터치하거나 클릭하거나
+    onPointerUp   : 터치를 멈추거나 클릭을 멈추거나
+     */
+    return Listener(
+      onPointerDown: (_) {
         final game = context.read<GameProviderSecond>();
-
-        // TODO: 게임이 시작되지 않았으면 startGame() 호출
         if(!game.gameStarted) {
           game.startGame();
+        } else {
+          game.startHolding();
         }
-
-        // TODO: jump() 호출
-        game.jump();
       },
+      onPointerUp: (_) {
+        final game = context.read<GameProviderSecond>();
+        game.stopHolding();
+        if (game.gameStarted) {
+          // game.startGame();
+          game.jump();
+        }
+      },
+
+      // onLongPressStart: (_) {
+      //   final game = context.read<GameProviderSecond>();
+      //   if(game.gameStarted) {
+      //     game.startHolding();
+      //   }
+      // },
+      // onLongPressEnd: (_) {
+      //   final game = context.read<GameProviderSecond>();
+      //   game.stopHolding();
+      // },
+      // onTap: () {
+      //   final game = context.read<GameProviderSecond>();
+      //   if(!game.gameStarted) {
+      //     game.startGame();
+      //   }
+      //   game.jump();
+      // },
       child: Scaffold(
         body: Column(
           children: [
-            // TODO: ScoreWidget (flex: 2)
-            Expanded(
-              flex: 2,
-              child:ScoreWidget()
-            ),
-
-            // TODO: GameArea (flex: 5)
+            /*
+            되도록이면 Expanded 등의 형식을 통일하여 한 곳에서 작성한다.
+             */
+            // Expanded(
+            //   flex: 2,
+            //   child:ScoreWidget()
+            // ),
+            ScoreWidget(),
             Expanded(
               flex: 6,
               child: GameAreaWidget(),
             ),
-
-            // TODO: GroundWidget (flex: 1)
-            const Expanded(
-                flex: 1,
-                child:GroundWidget()
-            ),
+            // const Expanded(
+            //     flex: 1,
+            //     child:GroundWidget()
+            // ),
+            const GroundWidget()
           ],
         ),
       ),

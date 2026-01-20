@@ -36,6 +36,7 @@ class GameProviderSecond with ChangeNotifier {
   // 게임 루프 실행하는 타이머 객체
   Timer? _timer;
 
+  Timer? _timeTimer;
 
 
 
@@ -53,33 +54,70 @@ class GameProviderSecond with ChangeNotifier {
    */
   void startGame() {
     gameStarted = true;
+    gameTime = 0;
+
     _timer = Timer.periodic(Duration(milliseconds: 50), (timer) {
-      // TODO: 시간 증가
-      time += 0.04;
 
-      // TODO: 물리 공식으로 높이 계산
-      height = initialHeight - 4.9 * time * time;
-
-      // TODO: 새의 Y 위치 업데이트
-      birdY = initialHeight - height;
-
-      // TODO: 장애물 이동 및 리셋 로직
       if(barrierX < -2) {
         barrierX = 2.5;
-        score++;
+        if(hasPassedBarrier == false){
+          score++;
+          hasPassedBarrier = true;
+        }
       } else {
         barrierX -= 0.05;
+        if(barrierX < 0 && hasPassedBarrier == true) {
+          hasPassedBarrier = false;
+        }
       }
 
-      // TODO: notifyListeners() 호출
-      notifyListeners();
+      if(isHolding) {
+        if(birdY > -0.9) {
+          birdY -= 0.03;
+          time = 0;
+          initialHeight - 1.9 * time * time;
+        } else {
+          birdY = -0.9;
+          time = 0;
+          initialHeight - 1.9 * time * time;
+        }
+      } else {
+        time += 0.05;
+        // height = initialHeight - 4.9 * time * time;
+        height = initialHeight - 1.9 * time * time;
+        birdY = initialHeight - height;
+      }
 
-      // TODO: 게임 오버 체크
+      _checkCollision();
+
+      notifyListeners();
       if(_checkGameOver()) {
         stopGame();
       }
     });
+
+    _timeTimer?.cancel();
+    _timeTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (!gameStarted) {
+        timer.cancel();
+        return;
+      }
+      gameTime += 1;
+      notifyListeners();
+    });
   }
+
+  void _checkCollision() {
+    if(barrierX < 0.2 && barrierX > -0.2) {
+      if(birdY < -0.3 || birdY > 0.3) {
+        if(!wasColliding) {
+          score = score > 0 ? score - 1 : 0;
+          wasColliding = true;
+        }
+      } else wasColliding = false;
+    } else wasColliding = false;
+  }
+
 
   // 새 점프시키는 메서드
   // 화면 탭할 때마다 호출
@@ -119,6 +157,7 @@ class GameProviderSecond with ChangeNotifier {
   void stopGame() {
     _timer?.cancel();
     gameStarted = false;
+    isHolding = false;
     resetGame();
     notifyListeners();
   }
@@ -133,6 +172,52 @@ class GameProviderSecond with ChangeNotifier {
     gameStarted = false;
     score = 0;
     barrierX = 2;
+    isHolding = false;
+    hasPassedBarrier = false;
+    wasColliding = false;
     notifyListeners();
   }
+
+
+
+  // 화면 꾹 누르고 있는지 여부
+  bool isHolding = false;
+
+  // 게임 시작 후 경과 시간(초)
+  double gameTime = 0;
+
+  // 목표 시간(초)
+  // 이 시간에 도달하면 게임 종료
+  final double targetTime = 60.0;
+
+  // 목표 점수
+  // 이 점수에 도달하면 게임 종료
+  final int targetScore = 20;
+
+  // 장애물 통과 여부 체크(중복 점수 방지)
+  bool hasPassedBarrier = false;
+
+  // 이전 프레임에서 충돌 상태였는가(중복 감점 방지)
+  bool wasColliding = false;
+
+  // 누르기 시작
+  void startHolding() {
+    isHolding = true;
+    time = 0;
+    initialHeight = birdY;
+  }
+
+  // 누르기 종료
+  void stopHolding() {
+    isHolding = false;
+    time = 0;
+    initialHeight = birdY;
+  }
+
+  // 남은 시간(초)
+  double get remainingTime => targetTime - gameTime;
+
+  // 남은 점수
+  int get remainingScore => targetScore - score;
+
 }
