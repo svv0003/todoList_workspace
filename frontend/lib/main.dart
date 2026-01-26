@@ -4,6 +4,7 @@ import 'package:frontend/providers/game_provider_second.dart';
 import 'package:frontend/providers/music_provider.dart';
 import 'package:frontend/screens/font_screen.dart';
 import 'package:frontend/screens/game_screen.dart';
+import 'package:frontend/screens/game_screen_second.dart';
 import 'package:frontend/screens/scaffold_screen.dart';
 import 'package:provider/provider.dart';
 import 'common/app_router.dart';
@@ -20,23 +21,37 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => TodoProvider()),
-        ChangeNotifierProvider(create: (_) => ThemeProvider()),
-        ChangeNotifierProvider(create: (_) => MusicProvider()),
-        ChangeNotifierProvider(create: (_) => GameProvider()),
-        ChangeNotifierProvider(create: (_) => GameProviderSecond()),
-      ],
-        child: Consumer<ThemeProvider>(
-          builder: (context, themeProvider, child) {
-            return MaterialApp.router(
-              debugShowCheckedModeBanner: false,
-              title: AppConstants.appName,
-              theme: themeProvider.themeData,
-              routerConfig: AppRouter.router
-            );
-          },
+    // return MultiProvider(
+    //   providers: [
+    //     ChangeNotifierProvider(create: (_) => TodoProvider()),
+    //     ChangeNotifierProvider(create: (_) => ThemeProvider()),
+    //     ChangeNotifierProvider(create: (_) => MusicProvider()),
+    //     ChangeNotifierProvider(create: (_) => GameProvider()),
+    //     ChangeNotifierProvider(create: (_) => GameProviderSecond()),
+    //   ],
+    //   child: Consumer<ThemeProvider>(
+    //     builder: (context, themeProvider, child) {
+    //       return MaterialApp.router(
+    //         debugShowCheckedModeBanner: false,
+    //         title: AppConstants.appName,
+    //         theme: themeProvider.themeData,
+    //         routerConfig: AppRouter.router
+    //       );
+    //     },
+    //   ),
+    // );
+
+    return ChangeNotifierProvider(
+        create: (_) => GameProviderSecond(),
+        child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+          home: Center(
+            child: Container(
+              width: 400,
+              height: 800,
+              child: GameScreenSecond(),
+            )
+          ),
         ),
     );
   }

@@ -9,7 +9,17 @@ class BackgroundWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue[200],
+      // color: Colors.blue[200],
+        decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/background.png'),
+              fit: BoxFit.cover,     // 화면 전체 덮는다.
+              // fit: BoxFit.fill,      // 비율 무시하고 전체 차지한다.
+              // fit: BoxFit.contain,   // 비율 유지한 체 전체 보인다.
+              filterQuality: FilterQuality.none,
+              alignment: Alignment.topCenter,
+            )
+        )
     );
   }
 }

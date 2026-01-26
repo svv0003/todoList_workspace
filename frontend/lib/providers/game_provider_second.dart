@@ -38,7 +38,32 @@ class GameProviderSecond with ChangeNotifier {
 
   Timer? _timeTimer;
 
+// 화면 꾹 누르고 있는지 여부
+  bool isHolding = false;
 
+  // 게임 시작 후 경과 시간(초)
+  double gameTime = 0;
+
+  // 목표 시간(초)
+  // 이 시간에 도달하면 게임 종료
+  final double targetTime = 60.0;
+
+  // 목표 점수
+  // 이 점수에 도달하면 게임 종료
+  final int targetScore = 20;
+
+  // 장애물 통과 여부 체크(중복 점수 방지)
+  bool hasPassedBarrier = false;
+
+  // 이전 프레임에서 충돌 상태였는가(중복 감점 방지)
+  bool wasColliding = false;
+
+
+  // 남은 시간(초)
+  double get remainingTime => targetTime - gameTime;
+
+  // 남은 점수
+  int get remainingScore => targetScore - score;
 
 
   //======================================== 게임 관련 메서드
@@ -55,9 +80,7 @@ class GameProviderSecond with ChangeNotifier {
   void startGame() {
     gameStarted = true;
     gameTime = 0;
-
     _timer = Timer.periodic(Duration(milliseconds: 50), (timer) {
-
       if(barrierX < -2) {
         barrierX = 2.5;
         if(hasPassedBarrier == false){
@@ -70,12 +93,11 @@ class GameProviderSecond with ChangeNotifier {
           hasPassedBarrier = false;
         }
       }
-
       if(isHolding) {
         if(birdY > -0.9) {
-          birdY -= 0.03;
+          birdY -= 0.07;
           time = 0;
-          initialHeight - 1.9 * time * time;
+          initialHeight = birdY;
         } else {
           birdY = -0.9;
           time = 0;
@@ -87,15 +109,12 @@ class GameProviderSecond with ChangeNotifier {
         height = initialHeight - 1.9 * time * time;
         birdY = initialHeight - height;
       }
-
       _checkCollision();
-
       notifyListeners();
       if(_checkGameOver()) {
         stopGame();
       }
     });
-
     _timeTimer?.cancel();
     _timeTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
       if (!gameStarted) {
@@ -178,28 +197,6 @@ class GameProviderSecond with ChangeNotifier {
     notifyListeners();
   }
 
-
-
-  // 화면 꾹 누르고 있는지 여부
-  bool isHolding = false;
-
-  // 게임 시작 후 경과 시간(초)
-  double gameTime = 0;
-
-  // 목표 시간(초)
-  // 이 시간에 도달하면 게임 종료
-  final double targetTime = 60.0;
-
-  // 목표 점수
-  // 이 점수에 도달하면 게임 종료
-  final int targetScore = 20;
-
-  // 장애물 통과 여부 체크(중복 점수 방지)
-  bool hasPassedBarrier = false;
-
-  // 이전 프레임에서 충돌 상태였는가(중복 감점 방지)
-  bool wasColliding = false;
-
   // 누르기 시작
   void startHolding() {
     isHolding = true;
@@ -213,11 +210,4 @@ class GameProviderSecond with ChangeNotifier {
     time = 0;
     initialHeight = birdY;
   }
-
-  // 남은 시간(초)
-  double get remainingTime => targetTime - gameTime;
-
-  // 남은 점수
-  int get remainingScore => targetScore - score;
-
 }

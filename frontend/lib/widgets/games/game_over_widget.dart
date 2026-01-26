@@ -3,16 +3,6 @@ import 'package:provider/provider.dart';
 
 import '../../providers/game_provider_second.dart';
 
-// TODO 과제: 게임 오버를 감지하고 다이얼로그를 표시하는 위젯 완성하기
-//
-// 구현해야 할 기능:
-// 1. 게임이 진행 중이었다가 멈춘 경우 감지
-// 2. 게임 종료 다이얼로그 표시
-//    - 시간 종료인지, 목표 달성인지, 게임 오버인지 구분
-//    - 최종 점수 표시
-//    - 플레이 시간 표시
-// 3. "다시 시작" 버튼으로 게임 리셋
-
 class GameOverListener extends StatefulWidget {
   const GameOverListener({super.key});
 
@@ -82,11 +72,5 @@ class _GameOverListenerState extends State<GameOverListener> {
         ]
       ),
     );
-    // TODO 과제 3: AlertDialog 작성
-    // 힌트: showDialog 함수를 사용하세요
-    // 힌트: AlertDialog의 구성요소
-    //   - title: 게임 종료 텍스트
-    //   - content: 종료 메시지와 플레이 시간
-    //   - actions: 다시 시작 버튼 (game.resetGame() 호출)
   }
 }

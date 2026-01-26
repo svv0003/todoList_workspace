@@ -15,7 +15,7 @@ class ScoreWidget extends StatelessWidget {
     return Expanded(
       flex: 2,
       child: Container(
-        color: Colors.blue[300],
+        color: Colors.blue[400],
         child: Center(
           child: game.gameStarted
             ? Column(
